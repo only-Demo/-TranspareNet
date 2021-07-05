@@ -1,12 +1,12 @@
 <template>
-  <img :src="`${publicPath}logo.png`">
+  <img :src="`${publicPath}${file}`">
 </template>
 
 <script>
 export default {
   name: 'GifViewer',
   props: {
-    msg: String
+    file: String
   },
   data () {
     return {
