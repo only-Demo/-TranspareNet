@@ -3,7 +3,6 @@ const execa = require("execa");
 const fs = require("fs");
 (async () => {
   try{
-    await execa("git", ["checkout", "-f", "main"]);
     await execa("git", ["add", "-A"]);
     await execa("git", ["commit", "-m", "save-update"]);
     await execa("git", ["push"]);
