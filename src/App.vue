@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <gif-viewer file="image0.gif">
+    <gif-viewer file="image0.gif"></gif-viewer>
   </div>
 </template>
 
