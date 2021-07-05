@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "execa": "latest",
+    "three": "^0.130.1",
     "vue": "^2.6.11",
-    "execa": "latest"
+    "vue-3d-model": "^1.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
