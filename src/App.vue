@@ -2,16 +2,18 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <gif-viewer msg="test"></gif-viewer>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import GifViewer from './components/GifViewer.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    GifViewer
   }
 }
 </script>
