@@ -12,6 +12,17 @@
       </select>
     </div>
     <div class="float-container">
+    <div  class="float-child">
+        <model-stl v-show="objType== 0" :src="`${publicPath}250ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+        <model-stl v-show="objType== 1" :src="`${publicPath}150ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+        <model-stl v-show="objType== 2" :src="`${publicPath}100ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+        <model-stl v-show="objType== 3" :src="`${publicPath}50mlflask.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+        <model-stl v-show="objType== 4" :src="`${publicPath}125mlflask.stl`" :height="600" :width="600" :cameraPosition=scale>  </model-stl>
+        <model-stl v-show="objType== 5" :src="`${publicPath}250mlflask.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+    </div>
+   
+    </div>
+    <div class="float-container">
     <div id="imageGif"  class="float-child">
       <gif-viewer v-show="objType == 0" file="image0.gif"></gif-viewer>
       <gif-viewer v-show="objType == 1" file="image1.gif"></gif-viewer>
@@ -34,7 +45,8 @@
       <gif-viewer v-show="objType == 4" file="depthgt24.gif"></gif-viewer>
     </div>
     </div>
-    <model-stl src="`${publicPath}gear.stl`"></model-obj>
+    
+    
   </div>
 
   
@@ -47,12 +59,13 @@ export default {
   name: 'App',
   components: {
     GifViewer,
-    ModelStl 
+    ModelStl
   },
   data (){
     return {
       objType: 0,
-      publicPath: process.env.BASE_URL
+      publicPath: process.env.BASE_URL,
+      scale: { x: 200, y: 0, z: -3 }
     }
   }
 }
@@ -70,7 +83,10 @@ export default {
 .float-container {
     padding: 20px;
 }
-
+.container {
+    height: 100%;
+    width: 100%;
+}
 .float-child {
     width: 33%;
     float: left;
