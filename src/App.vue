@@ -1,6 +1,8 @@
 <template>
   <div id="app" >
-    <div id="example-5">
+    <h1>Seeing Glass: Joint Point-Cloud and Depth Completion for Transparent Objects</h1>
+    <v-banner single-line>
+    <h3> <p style="text-align:left;">Objects in Dataset </p>  <div id="example-5">
       <span>Object Type:</span>
       <select v-model="objType">
         <option value=0>Beaker 0</option>
@@ -10,10 +12,26 @@
         <option value="4">Flask 1</option>
         <option value="5">Flask 2</option>
       </select>
+    </div></h3>
+    </v-banner>
+    <div class="float-container">
+        <div class="float-child">
+          <v-img :src="`${publicPath}cad.png`" contain></v-img>
+        </div>
+        <div class="float-child">
+          <v-img :src="`${publicPath}glass.png`" contain></v-img>
+        </div>
+        <div class="float-child">
+          <v-img :src="`${publicPath}filled.png`" contain></v-img>
+        </div>
     </div>
-    
+<br style="clear:both" />
+    <v-banner single-line>
+    <h3> <p style="text-align:left;"> Dataset Capture Time-lapse </p></h3>
+    </v-banner>
     <div class="float-container">
     <div id="imageGif"  class="float-child">
+      <h4> RGB </h4>
       <gif-viewer v-show="objType == 0" file="image0.gif"></gif-viewer>
       <gif-viewer v-show="objType == 1" file="image1.gif"></gif-viewer>
       <gif-viewer  v-show="objType == 2" file="image2.gif"></gif-viewer>
@@ -21,6 +39,7 @@
       <gif-viewer v-show="objType == 4" file="image24.gif"></gif-viewer>
     </div>
     <div id="depthGif"  class="float-child">
+      <h4> Sensor Raw Depth </h4>
       <gif-viewer v-show="objType == 0" file="depth0.gif"></gif-viewer>
       <gif-viewer v-show="objType == 1" file="depth1.gif"></gif-viewer>
       <gif-viewer v-show="objType == 2" file="depth2.gif"></gif-viewer>
@@ -28,6 +47,7 @@
       <gif-viewer v-show="objType == 4" file="depth24.gif"></gif-viewer>
     </div>
     <div id="depthGTGif"  class="float-child">
+      <h4> Ground Truth Depth </h4>
       <gif-viewer v-show="objType== 0" file="depthgt0.gif"></gif-viewer>
       <gif-viewer v-show="objType == 1" file="depthgt1.gif"></gif-viewer>
       <gif-viewer v-show="objType == 2" file="depthgt2.gif"></gif-viewer>
@@ -36,30 +56,20 @@
     </div>
     </div>
     <div class="float-container">
-    <div  class="float-child">
-        <model-stl v-show="objType== 0" :src="`${publicPath}250ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
-        <model-stl v-show="objType== 1" :src="`${publicPath}150ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
-        <model-stl v-show="objType== 2" :src="`${publicPath}100ml.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
-        <model-stl v-show="objType== 3" :src="`${publicPath}50mlflask.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
-        <model-stl v-show="objType== 4" :src="`${publicPath}125mlflask.stl`" :height="600" :width="600" :cameraPosition=scale>  </model-stl>
-        <model-stl v-show="objType== 5" :src="`${publicPath}250mlflask.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
-    </div>
-    <div  class="float-child">
-        <model-ply v-show="objType== 0" :src="`${publicPath}depth2pcd_0.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 1" :src="`${publicPath}depth2pcd_1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 2" :src="`${publicPath}depth2pcd_2.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 3" :src="`${publicPath}depth2pcd_3.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 4" :src="`${publicPath}depth2pcd_4.ply`" :height="600" :width="600" >  </model-ply>
-        <model-ply v-show="objType== 5" :src="`${publicPath}depth2pcd_5.ply`" :height="600" :width="600"> </model-ply>
-    </div>
-    <div  class="float-child">
-        <model-ply v-show="objType== 0" :src="`${publicPath}depth2pcd_GT_0.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 1" :src="`${publicPath}depth2pcd_GT_1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 2" :src="`${publicPath}depth2pcd_GT_2.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 3" :src="`${publicPath}depth2pcd_GT_3.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 4" :src="`${publicPath}depth2pcd_GT_4.ply`" :height="600" :width="600" >  </model-ply>
-        <model-ply v-show="objType== 5" :src="`${publicPath}depth2pcd_GT_5.ply`" :height="600" :width="600"> </model-ply>
-    </div>
+      <div class="float-child">
+        <h4> Object CAD Model </h4>
+        <model-stl :src="`${publicPath}${objType}.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
+      </div>
+      <div class="float-child">
+        <h4> Raw Depth Point Cloud</h4>
+        <model-ply  :src="`${publicPath}depth2pcd_${objType}.ply`" :height="600" :width="600" > </model-ply>
+        <!-- <model-obj  :src="`${publicPath}depth2pcd_${objType}.obj`" :height="600" :width="600" > </model-obj> -->
+      </div>
+      <div class="float-child">
+        <h4> Ground Truth Depth Point Cloud</h4>
+        <model-ply  :src="`${publicPath}depth2pcd_GT_${objType}.ply`" :height="600" :width="600" > </model-ply>
+        <!-- <model-obj  :src="`${publicPath}depth2pcd_GT_${objType}.obj`" :height="600" :width="600" > </model-obj> -->
+      </div>
     </div>
     
   </div>
@@ -68,8 +78,8 @@
 </template>
 
 <script>
-import GifViewer from './components/GifViewer.vue'
-import { ModelStl, ModelPly } from 'vue-3d-model';
+import GifViewer from './components/GifViewer.vue';
+import { ModelStl, ModelPly} from 'vue-3d-model';
 export default {
   name: 'App',
   components: {
@@ -81,7 +91,9 @@ export default {
     return {
       objType: 0,
       publicPath: process.env.BASE_URL,
-      scale: { x: 200, y: 0, z: -3 }
+      scale: { x: 200, y: 0, z: -3 },
+      videoId: "https://www.youtube.com/watch?v=mfL8tZUKRW4",
+      playerVars: {autoplay: 1}
     }
   }
 }
@@ -97,14 +109,14 @@ export default {
   margin-top: 60px;
 }
 .float-container {
-    padding: 20px;
+    padding: 0px;
 }
 .container {
     height: 100%;
     width: 100%;
 }
 .float-child {
-    width: 33%;
+    width: 32%;
     float: left;
 }  
 </style>
