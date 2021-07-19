@@ -45,20 +45,20 @@
         <model-stl v-show="objType== 5" :src="`${publicPath}250mlflask.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
     </div>
     <div  class="float-child">
-        <model-ply v-show="objType== 0" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 1" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 2" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 3" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 4" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600" >  </model-ply>
-        <model-ply v-show="objType== 5" :src="`${publicPath}depth_raw1.ply`" :height="600" :width="600"> </model-ply>
+        <model-ply v-show="objType== 0" :src="`${publicPath}depth2pcd_0.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 1" :src="`${publicPath}depth2pcd_1.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 2" :src="`${publicPath}depth2pcd_2.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 3" :src="`${publicPath}depth2pcd_3.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 4" :src="`${publicPath}depth2pcd_4.ply`" :height="600" :width="600" >  </model-ply>
+        <model-ply v-show="objType== 5" :src="`${publicPath}depth2pcd_5.ply`" :height="600" :width="600"> </model-ply>
     </div>
     <div  class="float-child">
-        <model-ply v-show="objType== 0" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 1" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 2" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 3" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600" > </model-ply>
-        <model-ply v-show="objType== 4" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600" >  </model-ply>
-        <model-ply v-show="objType== 5" :src="`${publicPath}depth_ground1.ply`" :height="600" :width="600"> </model-ply>
+        <model-ply v-show="objType== 0" :src="`${publicPath}depth2pcd_GT_0.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 1" :src="`${publicPath}depth2pcd_GT_1.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 2" :src="`${publicPath}depth2pcd_GT_2.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 3" :src="`${publicPath}depth2pcd_GT_3.ply`" :height="600" :width="600" > </model-ply>
+        <model-ply v-show="objType== 4" :src="`${publicPath}depth2pcd_GT_4.ply`" :height="600" :width="600" >  </model-ply>
+        <model-ply v-show="objType== 5" :src="`${publicPath}depth2pcd_GT_5.ply`" :height="600" :width="600"> </model-ply>
     </div>
     </div>
     
