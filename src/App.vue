@@ -1,6 +1,17 @@
 <template>
   <div id="app" >
     <h1>Seeing Glass: Joint Point-Cloud and Depth Completion for Transparent Objects</h1>
+    <p>
+      <a href="">Haoping Xu</a>", "
+      <a href="">Yi Ru Wang</a>", "
+      <a href="">Sagi Eppel</a>", "
+      <a href="https://www.matter.toronto.edu/basic-content-page/about-alan">Alan Aspuru-Guzik</a>", "
+      <a href="http://www.cs.toronto.edu/~florian/">Florian Shkurti</a>", "
+      <a href="https://animesh.garg.tech/">Animesh Garg</a>
+    </p>
+    <h2> Abstract </h2>
+    <p> The basis of many object manipulation algorithms is RGB-D input. Yet,1commodity RGB-D sensors can only provide distorted depth maps for a wide range2of transparent objects due light refraction and absorption. To tackle the perception3challenges posed by transparent objects, we propose TranspareNet, a joint point4cloud and depth completion method, with the ability to complete the depth of trans-5parent objects in cluttered and complex scenes, even with partially filled fluid con-6tents within the vessels. To address the shortcomings of existing transparent object7data collection schemes in literature, we also propose an automated dataset creation8workflow that consists of robot-controlled image collection and vision-based auto-9matic annotation. Through this automated workflow, we created Transparent Object10Depth Dataset (TODD), which consists of nearly 15000 RGB-D images. Our experi-11mental evaluation demonstrates that TranspareNet outperforms existing state-of-the-12art depth completion methods on multiple datasets, including ClearGrasp, and that13it also handles cluttered scenes when trained on TODD. </p>
+    
     <v-banner single-line>
     <h3> <p style="text-align:left;">Objects in Dataset </p>  <div id="example-5">
       <span>Object Type:</span>
