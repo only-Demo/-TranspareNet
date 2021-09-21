@@ -55,7 +55,7 @@
       <gif-viewer v-show="objType == 4" file="depthgt24.gif"></gif-viewer>
     </div>
     </div>
-    <div class="float-container">
+      <div class="float-container">
       <div class="float-child">
         <h4> Object CAD Model </h4>
         <model-stl :src="`${publicPath}${objType}.stl`" :height="600" :width="600" :cameraPosition=scale> </model-stl>
