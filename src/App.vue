@@ -1,7 +1,6 @@
 <template>
   <div id="app" >
-    <div style="max-width: 42rem; margin-left: auto;
-    margin-right: auto;">
+    <div>
     <h1>Seeing Glass: Joint Point-Cloud and Depth Completion for Transparent Objects</h1>
     <p>
       <a href="">Haoping Xu</a>, 
@@ -120,6 +119,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .float-container {
     padding: 0px;
