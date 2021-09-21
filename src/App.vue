@@ -20,15 +20,7 @@
     </div>
     <v-banner single-line>
     <h3> <p style="text-align:left;">Objects in Dataset </p>  <div id="example-5">
-      <span>Object Type:</span>
-      <select v-model="objType">
-        <option value=0>Beaker 0</option>
-        <option value="1">Beaker 1</option>
-        <option value="2">Beaker 2</option>
-        <option value="3">Flask 0</option>
-        <option value="4">Flask 1</option>
-        <option value="5">Flask 2</option>
-      </select>
+      
     </div></h3>
     </v-banner>
     <div class="float-container">
@@ -45,6 +37,15 @@
 <br style="clear:both" />
     <v-banner single-line>
     <h3> <p style="text-align:left;"> Dataset Capture Time-lapse </p></h3>
+    <span>Object Type:</span>
+      <select v-model="objType">
+        <option value=0>Beaker 0</option>
+        <option value="1">Beaker 1</option>
+        <option value="2">Beaker 2</option>
+        <option value="3">Flask 0</option>
+        <option value="4">Flask 1</option>
+        <option value="5">Flask 2</option>
+      </select>
     </v-banner>
     <div class="float-container">
     <div id="imageGif"  class="float-child">
@@ -142,4 +143,22 @@ p {
     width: 100%;
     float: left;
 }  
+.triangle {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    margin: 20px;
+}
+.top {
+    border-color: transparent transparent red transparent;
+}
+.left {
+    border-color: transparent transparent transparent red;
+}
+.bottom {
+    border-color: red transparent transparent transparent;
+}
+.right {
+    border-color: transparent red transparent transparent;
+}
 </style>
