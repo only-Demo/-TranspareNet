@@ -131,7 +131,7 @@ export default {
     width: 100%;
 }
 .float-child {
-    width: 32%;
+    width: 100%;
     float: left;
 }  
 </style>
