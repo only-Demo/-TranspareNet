@@ -10,6 +10,11 @@
       <a href="http://www.cs.toronto.edu/~florian/">Florian Shkurti</a>, 
       <a href="https://animesh.garg.tech/">Animesh Garg</a>
     </p>
+    <p style="text-align:left">
+      <em>
+        <a href="https://openreview.net/forum?id=tCfLLiP7vje"> CoRL 2021 Paper</a>
+      </em>
+    </p>
     <h2> Abstract </h2>
     <p style="text-align:left;"> The basis of many object manipulation algorithms is RGB-D input. Yet,commodity RGB-D sensors can only provide distorted depth maps for a wide range of transparent objects due light refraction and absorption. To tackle the perception challenges posed by transparent objects, we propose TranspareNet, a joint point cloud and depth completion method, with the ability to complete the depth of transparent objects in cluttered and complex scenes, even with partially filled fluid contents within the vessels. To address the shortcomings of existing transparent object data collection schemes in literature, we also propose an automated dataset creation workflow that consists of robot-controlled image collection and vision-based automatic annotation. Through this automated workflow, we created Transparent Object Depth Dataset (TODD), which consists of nearly 15000 RGB-D images. Our experimental evaluation demonstrates that TranspareNet outperforms existing state-of-the-art depth completion methods on multiple datasets, including ClearGrasp, and that it also handles cluttered scenes when trained on TODD. </p>
     </div>
@@ -122,6 +127,9 @@ export default {
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+}
+p {
+      margin-bottom: 1rem;
 }
 .float-container {
     padding: 0px;
